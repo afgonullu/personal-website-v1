@@ -35,7 +35,7 @@ export const getStaticPaths = () => {
   }
 }
 
-const Post: React.FC = (props) => {
+const Post: React.FC<{ post: Post }> = (props) => {
   const { post } = props
 
   const router = useRouter()
