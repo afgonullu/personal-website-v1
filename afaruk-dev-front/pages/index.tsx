@@ -49,7 +49,7 @@ const Home: React.FC<{ posts: Post[] }> = (props) => {
           </ul>
         </Col>
         <Col>
-          <Button primary>Deneme</Button>
+          <Button>Deneme</Button>
         </Col>
       </Row>
     </Container>
