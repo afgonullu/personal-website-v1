@@ -1,6 +1,7 @@
 import Head from "next/head"
-import styles from "../styles/Home.module.scss"
+// import styles from "../styles/Home.module.scss"
 import Link from "next/link"
+import { Container, Row, Col, Button } from "react-bootstrap"
 
 const { CONTENT_API_KEY, BLOG_URL } = process.env
 
@@ -31,20 +32,27 @@ const Home: React.FC<{ posts: Post[] }> = (props) => {
   const { posts } = props
 
   return (
-    <div className={styles.container}>
-      <h1>Hello, I am A Faruk Gonullu</h1>
-      <ul>
-        {posts.map((post, index) => {
-          return (
-            <li key={post.slug}>
-              <Link href="/post/[slug]" as={`/post/${post.slug}`}>
-                <a>{post.title}</a>
-              </Link>
-            </li>
-          )
-        })}
-      </ul>
-    </div>
+    <Container>
+      <Row>
+        <Col>
+          <h1>Hello, I am A Faruk Gonullu</h1>
+          <ul>
+            {posts.map((post, index) => {
+              return (
+                <li key={post.slug}>
+                  <Link href="/post/[slug]" as={`/post/${post.slug}`}>
+                    <a>{post.title}</a>
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+        </Col>
+        <Col>
+          <Button primary>Deneme</Button>
+        </Col>
+      </Row>
+    </Container>
   )
 }
 

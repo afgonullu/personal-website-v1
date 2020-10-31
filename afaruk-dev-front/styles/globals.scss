@@ -19,3 +19,9 @@ img {
   width: 30%;
   height: auto;
 }
+
+$theme-colors: (
+  "primary": #ccc,
+);
+
+@import "~bootstrap/scss/bootstrap";

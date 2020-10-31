@@ -1,5 +1,5 @@
 import Link from "next/link"
-import styles from "../../styles/Home.module.scss"
+// import styles from "../../styles/Home.module.scss"
 import { useRouter } from "next/router"
 
 const { CONTENT_API_KEY, BLOG_URL } = process.env
@@ -45,7 +45,7 @@ const Post: React.FC<{ post: Post }> = (props) => {
   }
 
   return (
-    <div className={styles.container}>
+    <div>
       <Link href="/">
         <a>Go Back</a>
       </Link>
