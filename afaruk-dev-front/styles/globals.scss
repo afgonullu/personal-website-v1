@@ -1,27 +1,96 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-img {
-  width: 30%;
-  height: auto;
-}
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap");
 
 $theme-colors: (
-  "primary": #ccc,
-);
+  "primary": #14213e,
+  "secondary": #fca311,
+  "success": #89a668,
+  "info": #eaf9d9,
+  "warning": #c7ef00,
+  "danger": #c80428,
+  "light": #f5f5f5,
+  "dark": #0a0a0a,
+) !default;
+
+$navbar-dark-color: #f5f5f5 !default;
+$navbar-dark-hover-color: #fca311 !default;
+$navbar-dark-active-color: #fca311 !default;
+$navbar-dark-disabled-color: rgba(#fff, 0.25) !default;
+$navbar-dark-toggler-border-color: #f5f5f5 !default;
+
+$font-family-base: "Jost", Helvetica Neue, sans-serif;
+
+// scss-docs-start container-max-widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1120px,
+  xxl: 1120px,
+) !default;
+// scss-docs-end container-max-widths
+
+$input-btn-padding-y: 0.328rem !default;
+$input-btn-padding-x: 1.25rem !default;
+$input-btn-padding-y-lg: 0.512rem !default;
+$input-btn-padding-x-lg: 1.563rem !default;
+$input-btn-padding-y-sm: 0.21rem !default;
+$input-btn-padding-x-sm: 0.64rem !default;
+$btn-font-weight: 700 !default;
+
+$link-color: #f5f5f5 !default;
+$link-hover-color: darken($link-color, 15%) !default;
+
+$body-bg: #14213e !default;
+$body-color: #f5f5f5 !default;
 
 @import "~bootstrap/scss/bootstrap";
+
+section {
+  @extend .my-5;
+  @extend .py-5;
+}
+
+.hero {
+  img {
+    border-radius: 2.441rem;
+    max-width: 360px;
+    width: 100%;
+  }
+
+  a {
+    color: #fca311;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  button {
+    color: #0a0a0a;
+  }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+
+  img,
+  svg {
+    margin-right: 0.4rem;
+  }
+
+  &:last-child {
+    padding: 5.24px 20px;
+    border: 1px solid #c80428;
+    border-radius: 0.512rem;
+    margin-left: 0.8rem;
+
+    &:hover,
+    &:focus {
+      background: #c80428;
+      color: #f5f5f5;
+    }
+  }
+}
