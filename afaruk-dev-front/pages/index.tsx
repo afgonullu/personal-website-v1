@@ -7,9 +7,11 @@ import SectionPortfolio1 from "./components/SectionPortfolio/SectionPortfolio1"
 import { Container, Row, Col } from "react-bootstrap"
 import { getFeaturedPostsByTag } from "./api/ghost"
 
-type Post = {
+export type Post = {
   title: string
   slug: string
+  tags: []
+  custom_excerpt: string
 }
 
 export const getStaticProps = async ({ params }) => {
@@ -30,7 +32,7 @@ const Home: React.FC<{ blogPosts: Post[]; portfolioPosts: Post[] }> = (
     <React.Fragment>
       <SiteNavbar></SiteNavbar>
       <SectionHero></SectionHero>
-      <SectionPortfolio></SectionPortfolio>
+      <SectionPortfolio portfolios={portfolioPosts}></SectionPortfolio>
       <Container>
         <Row>
           <Col>
@@ -66,7 +68,7 @@ const Home: React.FC<{ blogPosts: Post[]; portfolioPosts: Post[] }> = (
           </Col>
         </Row>
       </Container>
-      <SectionPortfolio1></SectionPortfolio1>
+      {/* <SectionPortfolio1></SectionPortfolio1> */}
     </React.Fragment>
   )
 }

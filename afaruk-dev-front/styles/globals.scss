@@ -71,6 +71,17 @@ section {
   }
 }
 
+.featured-portfolio {
+  .lead {
+    color: #c80428;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 .navbar-dark .navbar-nav .nav-link {
   font-weight: 700;
   display: flex;

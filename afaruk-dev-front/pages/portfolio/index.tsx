@@ -10,6 +10,7 @@ type Post = {
 
 export const getStaticProps = async ({ params }) => {
   const posts = await getPostsByTag("portfolio")
+  console.log(posts)
   return {
     props: { posts },
     revalidate: 10,
