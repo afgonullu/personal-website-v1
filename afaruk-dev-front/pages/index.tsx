@@ -12,15 +12,18 @@ type Post = {
 }
 
 export const getStaticProps = async ({ params }) => {
-  const posts = await getFeaturedPostsByTag("blog")
+  const blogPosts = await getFeaturedPostsByTag("blog")
+  const portfolioPosts = await getFeaturedPostsByTag("portfolio")
   return {
-    props: { posts },
+    props: { blogPosts, portfolioPosts },
     revalidate: 10,
   }
 }
 
-const Home: React.FC<{ posts: Post[] }> = (props) => {
-  const { posts } = props
+const Home: React.FC<{ blogPosts: Post[]; portfolioPosts: Post[] }> = (
+  props
+) => {
+  const { blogPosts, portfolioPosts } = props
 
   return (
     <React.Fragment>
@@ -30,12 +33,29 @@ const Home: React.FC<{ posts: Post[] }> = (props) => {
       <Container>
         <Row>
           <Col>
-            <h2>Latest Posts</h2>
+            <h2>Latest Blog Posts</h2>
             <ul>
-              {posts.map((post, index) => {
+              {blogPosts.map((post, index) => {
                 return (
                   <li key={post.slug}>
                     <Link href="/blog/[slug]" as={`/blog/${post.slug}`}>
+                      <a>{post.title}</a>
+                    </Link>
+                  </li>
+                )
+              })}
+            </ul>
+          </Col>
+          <Col>
+            <h2>Latest Portfolio Posts</h2>
+            <ul>
+              {portfolioPosts.map((post, index) => {
+                return (
+                  <li key={post.slug}>
+                    <Link
+                      href="/portfolio/[slug]"
+                      as={`/portfolio/${post.slug}`}
+                    >
                       <a>{post.title}</a>
                     </Link>
                   </li>
