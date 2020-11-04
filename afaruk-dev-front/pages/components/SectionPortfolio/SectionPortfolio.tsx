@@ -1,5 +1,5 @@
 import React from "react"
-import { CardColumns, Card, Row, Button, Col, Container } from "react-bootstrap"
+import { Card, Row, Button, Col, Container } from "react-bootstrap"
 
 const SectionPortfolio: React.FC = (props) => {
   return (
