@@ -63,6 +63,17 @@ const api = new GhostContentAPI({
       });
   }
 
+  export async function getPageByTag(tag) {
+    return await api.pages
+      .browse({
+        filter: `tag:${tag}`,
+        limit: "all"
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  }
+
 //   // fetch 5 posts, including related tags and authors
 // api.posts.browse({
 //   filter: 'tag:fiction+tag:-fables'
