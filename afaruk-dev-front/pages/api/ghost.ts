@@ -31,6 +31,18 @@ const api = new GhostContentAPI({
       });
   }
 
+  export async function getPostsByTag(tag) {
+    return await api.posts
+      .browse({
+        filter: `tag:${tag}`,
+        include: "tags,authors",
+        limit: "all"
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  }
+
   export async function getSinglePost(postSlug) {
     return await api.posts
       .read({

@@ -4,7 +4,7 @@ import SiteNavbar from "./components/SiteNavbar/SiteNavbar"
 import SectionHero from "./components/SectionHero/SectionHero"
 import SectionPortfolio from "./components/SectionPortfolio/SectionPortfolio"
 import { Container, Row, Col } from "react-bootstrap"
-import { getAllPosts, getFeaturedPostsByTag } from "./api/ghost"
+import { getFeaturedPostsByTag } from "./api/ghost"
 
 type Post = {
   title: string

@@ -6,7 +6,7 @@ const SiteNavbar: React.FC = (props) => {
     <header>
       <Container>
         <Navbar collapseOnSelect expand="md" bg="primary" variant="dark">
-          <Navbar.Brand className="text-light" href="#home">
+          <Navbar.Brand className="text-light" href="/">
             <img
               alt=""
               src="/assets/logo.svg"
@@ -19,7 +19,7 @@ const SiteNavbar: React.FC = (props) => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
-              <Nav.Link href="#blog">
+              <Nav.Link href="/blog">
                 <svg
                   width="1em"
                   height="1em"
@@ -35,7 +35,7 @@ const SiteNavbar: React.FC = (props) => {
                 </svg>
                 Blog
               </Nav.Link>
-              <Nav.Link href="#portfolio">
+              <Nav.Link href="/portfolio">
                 <svg
                   width="1em"
                   height="1em"
@@ -55,7 +55,7 @@ const SiteNavbar: React.FC = (props) => {
                 </svg>
                 Portfolio
               </Nav.Link>
-              <Nav.Link href="#workflow">
+              <Nav.Link href="/workflow">
                 <svg
                   width="1em"
                   height="1em"
@@ -68,7 +68,7 @@ const SiteNavbar: React.FC = (props) => {
                 </svg>
                 Workflow
               </Nav.Link>
-              <Nav.Link href="#about">
+              <Nav.Link href="/about">
                 <svg
                   width="1em"
                   height="1em"
@@ -88,7 +88,7 @@ const SiteNavbar: React.FC = (props) => {
                 </svg>
                 About
               </Nav.Link>
-              <Nav.Link href="#contact">
+              <Nav.Link href="/contact">
                 <svg
                   width="1em"
                   height="1em"
