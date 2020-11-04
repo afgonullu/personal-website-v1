@@ -5,7 +5,7 @@ const SiteNavbar: React.FC = (props) => {
   return (
     <header>
       <Container>
-        <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
+        <Navbar collapseOnSelect expand="md" bg="primary" variant="dark">
           <Navbar.Brand className="text-light" href="#home">
             <img
               alt=""

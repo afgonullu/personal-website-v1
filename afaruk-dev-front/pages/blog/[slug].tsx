@@ -1,8 +1,6 @@
 import Link from "next/link"
-// import styles from "../../styles/Home.module.scss"
 import { useRouter } from "next/router"
-
-const { CONTENT_API_KEY, BLOG_URL } = process.env
+import { getSinglePost } from "../api/ghost"
 
 type Post = {
   title: string
@@ -10,18 +8,8 @@ type Post = {
   slug: string
 }
 
-async function getPost(slug: string) {
-  const res = await fetch(
-    `${BLOG_URL}/ghost/api/v3/content/posts/slug/${slug}?key=${CONTENT_API_KEY}&fields=title,slug,reading_time,html`
-  ).then((res) => res.json())
-
-  const posts = res.posts
-
-  return posts[0]
-}
-
 export const getStaticProps = async ({ params }) => {
-  const post = await getPost(params.slug)
+  const post = await getSinglePost(params.slug)
   return {
     props: { post },
     revalidate: 10,

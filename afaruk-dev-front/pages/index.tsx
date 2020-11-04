@@ -2,28 +2,17 @@ import Link from "next/link"
 import React from "react"
 import SiteNavbar from "./components/SiteNavbar/SiteNavbar"
 import SectionHero from "./components/SectionHero/SectionHero"
+import SectionPortfolio from "./components/SectionPortfolio/SectionPortfolio"
 import { Container, Row, Col } from "react-bootstrap"
-
-const { CONTENT_API_KEY, BLOG_URL } = process.env
+import { getAllPosts, getFeaturedPostsByTag } from "./api/ghost"
 
 type Post = {
   title: string
   slug: string
 }
 
-async function getPosts() {
-  const res = await fetch(
-    `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&filter=tag:blog`
-  ).then((res) => res.json())
-
-  console.log(res)
-  const titles = res.posts
-
-  return titles
-}
-
 export const getStaticProps = async ({ params }) => {
-  const posts = await getPosts()
+  const posts = await getFeaturedPostsByTag("blog")
   return {
     props: { posts },
     revalidate: 10,
@@ -37,6 +26,7 @@ const Home: React.FC<{ posts: Post[] }> = (props) => {
     <React.Fragment>
       <SiteNavbar></SiteNavbar>
       <SectionHero></SectionHero>
+      <SectionPortfolio></SectionPortfolio>
       <Container>
         <Row>
           <Col>
