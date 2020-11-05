@@ -1,4 +1,6 @@
 import Link from "next/link"
+import React from "react"
+import SiteNavbar from "../components/SiteNavbar/SiteNavbar"
 import { useRouter } from "next/router"
 // import { getPostsByTag } from "../api/ghost"
 
@@ -27,12 +29,14 @@ const Post: React.FC<{ text: string }> = (props) => {
   }
 
   return (
-    <div>
-      <Link href="/">
-        <a>Go Back</a>
-      </Link>
-      <h1>About Me</h1>
-      {/* <ul>
+    <React.Fragment>
+      <SiteNavbar></SiteNavbar>
+      <div>
+        <Link href="/">
+          <a>Go Back</a>
+        </Link>
+        <h1>About Me</h1>
+        {/* <ul>
         {posts.map((post, index) => {
           return (
             <li key={post.slug}>
@@ -43,7 +47,8 @@ const Post: React.FC<{ text: string }> = (props) => {
           )
         })}
       </ul> */}
-    </div>
+      </div>
+    </React.Fragment>
   )
 }
 

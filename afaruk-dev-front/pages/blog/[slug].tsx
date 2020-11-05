@@ -1,4 +1,6 @@
 import Link from "next/link"
+import React from "react"
+import SiteNavbar from "../components/SiteNavbar/SiteNavbar"
 import { useRouter } from "next/router"
 import { getSinglePost } from "../api/ghost"
 
@@ -33,13 +35,16 @@ const Post: React.FC<{ post: Post }> = (props) => {
   }
 
   return (
-    <div>
-      <Link href="/">
-        <a>Go Back</a>
-      </Link>
-      <h1>{post.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
-    </div>
+    <React.Fragment>
+      <SiteNavbar></SiteNavbar>
+      <div>
+        <Link href="/">
+          <a>Go Back</a>
+        </Link>
+        <h1>{post.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+      </div>
+    </React.Fragment>
   )
 }
 

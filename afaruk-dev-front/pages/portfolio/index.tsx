@@ -1,4 +1,6 @@
 import Link from "next/link"
+import React from "react"
+import SiteNavbar from "../components/SiteNavbar/SiteNavbar"
 import { useRouter } from "next/router"
 import { getPostsByTag } from "../api/ghost"
 
@@ -27,23 +29,26 @@ const Post: React.FC<{ posts: Post[] }> = (props) => {
   }
 
   return (
-    <div>
-      <Link href="/">
-        <a>Go Back</a>
-      </Link>
-      <h1>Portfolio Home</h1>
-      <ul>
-        {posts.map((post, index) => {
-          return (
-            <li key={post.slug}>
-              <Link href="portfolio/[slug]" as={`/portfolio/${post.slug}`}>
-                <a>{post.title}</a>
-              </Link>
-            </li>
-          )
-        })}
-      </ul>
-    </div>
+    <React.Fragment>
+      <SiteNavbar></SiteNavbar>
+      <div>
+        <Link href="/">
+          <a>Go Back</a>
+        </Link>
+        <h1>Portfolio Home</h1>
+        <ul>
+          {posts.map((post, index) => {
+            return (
+              <li key={post.slug}>
+                <Link href="portfolio/[slug]" as={`/portfolio/${post.slug}`}>
+                  <a>{post.title}</a>
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+    </React.Fragment>
   )
 }
 
