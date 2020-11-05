@@ -2,16 +2,17 @@ import React from "react"
 import Link from "next/link"
 import Icons from "./Icons"
 import { Card, Button, Container, CardGroup } from "react-bootstrap"
-import { Post, Tags } from "../../index"
+import { Post } from "../../index"
+import { getFeaturedPostsByTag } from "../../api/ghost"
 
-const SectionPortfolio: React.FC<{ portfolios: Post[] }> = (props) => {
-  const { portfolios } = props
+const SectionPortfolio: React.FC<{ portfolioPosts: Post[] }> = (props) => {
+  const { portfolioPosts } = props
 
   let cards = []
-  if (portfolios == undefined) {
+  if (portfolioPosts == undefined) {
     cards = [1, 2, 3]
   } else {
-    portfolios.map((portfolio, i) => {
+    cards = portfolioPosts.map((portfolio, i) => {
       return (
         <Card
           bg="light"

@@ -36,7 +36,7 @@ const Home: React.FC<{ blogPosts: Post[]; portfolioPosts: Post[] }> = (
     <React.Fragment>
       <SiteNavbar></SiteNavbar>
       <SectionHero></SectionHero>
-      <SectionPortfolio portfolios={portfolioPosts}></SectionPortfolio>
+      <SectionPortfolio portfolioPosts={portfolioPosts}></SectionPortfolio>
       <Container>
         <Row>
           <Col>
