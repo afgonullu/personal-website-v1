@@ -1,5 +1,5 @@
 import React from "react"
-import { Post } from "../../index"
+import { Post, Tags } from "../../index"
 
 const Icons: React.FC<{ portfolio: Post }> = (props) => {
   const { portfolio } = props

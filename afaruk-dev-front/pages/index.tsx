@@ -7,10 +7,14 @@ import SectionPortfolio1 from "./components/SectionPortfolio/SectionPortfolio1"
 import { Container, Row, Col } from "react-bootstrap"
 import { getFeaturedPostsByTag } from "./api/ghost"
 
+export type Tags = {
+  name: string
+}
+
 export type Post = {
   title: string
   slug: string
-  tags: [{ name: string }]
+  tags: [Tags]
   custom_excerpt: string
 }
 

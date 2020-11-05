@@ -2,7 +2,7 @@ import React from "react"
 import Link from "next/link"
 import Icons from "./Icons"
 import { Card, Button, Container, CardGroup } from "react-bootstrap"
-import { Post } from "../../index"
+import { Post, Tags } from "../../index"
 
 const SectionPortfolio: React.FC<{ portfolios: Post[] }> = (props) => {
   const { portfolios } = props
