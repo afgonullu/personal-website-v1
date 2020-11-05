@@ -10,7 +10,7 @@ import { getFeaturedPostsByTag } from "./api/ghost"
 export type Post = {
   title: string
   slug: string
-  tags: []
+  tags: [{ name: string }]
   custom_excerpt: string
 }
 
