@@ -3,19 +3,15 @@ import React from "react"
 import SiteNavbar from "./components/SiteNavbar/SiteNavbar"
 import SectionHero from "./components/SectionHero/SectionHero"
 import SectionPortfolio from "./components/SectionPortfolio/SectionPortfolio"
-import SectionPortfolio1 from "./components/SectionPortfolio/SectionPortfolio1"
 import { Container, Row, Col } from "react-bootstrap"
 import { getFeaturedPostsByTag } from "./api/ghost"
-
-export type Tags = {
-  name: string
-}
 
 export type Post = {
   title: string
   slug: string
-  tags: [Tags]
+  tags: [{ name: string }]
   custom_excerpt: string
+  html: string
 }
 
 export const getStaticProps = async ({ params }) => {

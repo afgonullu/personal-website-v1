@@ -1,14 +1,9 @@
 import Link from "next/link"
 import React from "react"
 import SiteNavbar from "../components/SiteNavbar/SiteNavbar"
-import { useRouter } from "next/router"
 import { getPostsByTag } from "../api/ghost"
-
-type Post = {
-  title: string
-  html: string
-  slug: string
-}
+import { Post } from "../index"
+import { Container } from "react-bootstrap"
 
 export const getStaticProps = async ({ params }) => {
   const posts = await getPostsByTag("blog")
@@ -21,16 +16,10 @@ export const getStaticProps = async ({ params }) => {
 const Blog: React.FC<{ posts: Post[] }> = (props) => {
   const { posts } = props
 
-  const router = useRouter()
-
-  if (router.isFallback) {
-    return <h1>Loading...</h1>
-  }
-
   return (
     <React.Fragment>
       <SiteNavbar></SiteNavbar>
-      <div>
+      <Container>
         <Link href="/">
           <a>Go Back</a>
         </Link>
@@ -46,7 +35,7 @@ const Blog: React.FC<{ posts: Post[] }> = (props) => {
             )
           })}
         </ul>
-      </div>
+      </Container>
     </React.Fragment>
   )
 }

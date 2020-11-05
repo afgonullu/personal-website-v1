@@ -52,7 +52,7 @@ section {
   @extend .py-5;
 }
 
-.hero {
+.section-hero {
   img {
     border-radius: 2.441rem;
     max-width: 360px;
@@ -74,7 +74,7 @@ section {
   }
 }
 
-.featured-portfolio {
+.section-portfolio {
   .lead {
     span {
       color: #c80428;

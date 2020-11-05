@@ -3,12 +3,8 @@ import React from "react"
 import SiteNavbar from "../components/SiteNavbar/SiteNavbar"
 import { useRouter } from "next/router"
 import { getSinglePost } from "../api/ghost"
-
-type Post = {
-  title: string
-  html: string
-  slug: string
-}
+import { Post } from "../index"
+import { Container } from "react-bootstrap"
 
 export const getStaticProps = async ({ params }) => {
   const post = await getSinglePost(params.slug)
@@ -37,13 +33,13 @@ const BlogPost: React.FC<{ post: Post }> = (props) => {
   return (
     <React.Fragment>
       <SiteNavbar></SiteNavbar>
-      <div>
+      <Container>
         <Link href="/">
           <a>Go Back</a>
         </Link>
         <h1>{post.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
-      </div>
+      </Container>
     </React.Fragment>
   )
 }

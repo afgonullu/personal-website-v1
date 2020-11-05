@@ -4,7 +4,7 @@ import { Container, Row, Col, Button, Jumbotron } from "react-bootstrap"
 
 const SectionHero: React.FC = (props) => {
   return (
-    <section className="hero text-light">
+    <section className="section-hero text-light">
       <Container>
         <Jumbotron fluid>
           <Row className="d-flex justify-content-between align-items-center">
