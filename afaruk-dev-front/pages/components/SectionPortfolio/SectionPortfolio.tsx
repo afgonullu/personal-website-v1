@@ -80,10 +80,10 @@ const SectionPortfolio: React.FC<{ portfolios: Post[] }> = (props) => {
         </p>
 
         <CardGroup className="mb-3">{cards}</CardGroup>
+        <p className="lead">
+          <Link href="#">Check Out My Full Portfolio</Link>
+        </p>
       </Container>
-      <Link href="#">
-        <p className="lead">Check Out My Full Portfolio</p>
-      </Link>
     </section>
   )
 }
