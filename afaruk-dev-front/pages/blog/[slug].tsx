@@ -25,7 +25,7 @@ export const getStaticPaths = () => {
   }
 }
 
-const Post: React.FC<{ post: Post }> = (props) => {
+const BlogPost: React.FC<{ post: Post }> = (props) => {
   const { post } = props
 
   const router = useRouter()
@@ -48,4 +48,4 @@ const Post: React.FC<{ post: Post }> = (props) => {
   )
 }
 
-export default Post
+export default BlogPost

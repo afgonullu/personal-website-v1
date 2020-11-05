@@ -19,7 +19,7 @@ export const getStaticProps = async ({ params }) => {
   }
 }
 
-const Post: React.FC<{ posts: Post[] }> = (props) => {
+const Portfolio: React.FC<{ posts: Post[] }> = (props) => {
   const { posts } = props
 
   const router = useRouter()
@@ -52,4 +52,4 @@ const Post: React.FC<{ posts: Post[] }> = (props) => {
   )
 }
 
-export default Post
+export default Portfolio

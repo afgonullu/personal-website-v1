@@ -19,7 +19,7 @@ export const getStaticProps = async ({ params }) => {
   }
 }
 
-const Post: React.FC<{ text: string }> = (props) => {
+const Workflow: React.FC<{ text: string }> = (props) => {
   const { text } = props
 
   const router = useRouter()
@@ -52,4 +52,4 @@ const Post: React.FC<{ text: string }> = (props) => {
   )
 }
 
-export default Post
+export default Workflow
