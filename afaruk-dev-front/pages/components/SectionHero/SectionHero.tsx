@@ -17,10 +17,14 @@ const SectionHero: React.FC = (props) => {
                 efficient products and operations in the past. Now I build on
                 the internet, with code.
               </p>
-              <Button className="mr-3" variant="secondary">
+              <Button
+                href="/portfolio"
+                className="mr-3 main-cta"
+                variant="secondary"
+              >
                 Check Out My Works
               </Button>
-              <Link href="#">My Resume</Link>
+              <Link href="/about">My Resume</Link>
             </Col>
             <Col md="5" className="d-none d-md-block">
               <img

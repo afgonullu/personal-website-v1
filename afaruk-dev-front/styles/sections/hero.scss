@@ -1,0 +1,23 @@
+.section-hero {
+  img {
+    border-radius: 2.441rem;
+    max-width: 360px;
+    width: 100%;
+    box-shadow: $shadow;
+  }
+  .main-cta {
+    color: #0a0a0a;
+  }
+  a {
+    color: #fca311;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  button {
+    color: #0a0a0a;
+  }
+}

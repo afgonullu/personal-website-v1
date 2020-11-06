@@ -1,0 +1,13 @@
+.section-portfolio {
+  .lead {
+    span {
+      color: #c80428;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

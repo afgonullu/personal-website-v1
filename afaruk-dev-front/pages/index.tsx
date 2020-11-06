@@ -3,6 +3,10 @@ import React from "react"
 import SiteNavbar from "./components/SiteNavbar/SiteNavbar"
 import SectionHero from "./components/SectionHero/SectionHero"
 import SectionPortfolio from "./components/SectionPortfolio/SectionPortfolio"
+import SectionAbout from "./components/SectionAbout/SectionAbout"
+import SectionBlog from "./components/SectionBlog/SectionBlog"
+import SectionContact from "./components/SectionContact/SectionContact"
+import SiteFooter from "./components/SiteFooter/SiteFooter"
 import { Container, Row, Col } from "react-bootstrap"
 import { getFeaturedPostsByTag } from "./api/ghost"
 
@@ -33,7 +37,18 @@ const Home: React.FC<{ blogPosts: Post[]; portfolioPosts: Post[] }> = (
       <SiteNavbar></SiteNavbar>
       <SectionHero></SectionHero>
       <SectionPortfolio portfolioPosts={portfolioPosts}></SectionPortfolio>
-      <Container>
+      <SectionAbout></SectionAbout>
+      <SectionBlog blogPosts={blogPosts}></SectionBlog>
+      <SectionContact></SectionContact>
+      <SiteFooter></SiteFooter>
+    </React.Fragment>
+  )
+}
+
+export default Home
+
+{
+  /* <Container>
         <Row>
           <Col>
             <h2>Latest Blog Posts</h2>
@@ -67,10 +82,5 @@ const Home: React.FC<{ blogPosts: Post[]; portfolioPosts: Post[] }> = (
             </ul>
           </Col>
         </Row>
-      </Container>
-      {/* <SectionPortfolio1></SectionPortfolio1> */}
-    </React.Fragment>
-  )
+      </Container> */
 }
-
-export default Home
