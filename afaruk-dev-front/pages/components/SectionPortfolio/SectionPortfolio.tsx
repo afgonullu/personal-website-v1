@@ -41,7 +41,7 @@ const SectionPortfolio: React.FC<{ portfolioPosts: Post[] }> = (props) => {
     <section className="section-portfolio text-light text-center my-3 py-3">
       <Container>
         <div className="mx-5 px-5">
-          <h3>Featured Works</h3>
+          <h3>Recent Works</h3>
           <p>
             Below you will see some of my featured works and finished projects.
             I design and develop each project using best practices and modern

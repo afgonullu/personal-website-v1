@@ -10,7 +10,7 @@ const SectionHero: React.FC = (props) => {
           <Row className="d-flex justify-content-between align-items-center">
             <Col md="7">
               <h5>HI, I AM ABDULLAH 👋</h5>
-              <h1>I Design And Develop Modern Web Applications.</h1>
+              <h1>I Design and Develop Modern Web Sites and Applications.</h1>
               <p className="lead">
                 Resolving problems into beautifully crafted solutions is an
                 intrinsic drive for me. That helped me build sustainable and

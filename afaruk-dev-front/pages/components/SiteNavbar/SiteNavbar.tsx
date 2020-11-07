@@ -1,9 +1,11 @@
 import React from "react"
+import HeadData from "../HeadData/HeadData"
 import { Container, Navbar, Nav } from "react-bootstrap"
 
 const SiteNavbar: React.FC = (props) => {
   return (
     <header>
+      <HeadData></HeadData>
       <Container>
         <Navbar collapseOnSelect expand="md" bg="primary" variant="dark">
           <Navbar.Brand className="text-light" href="/">
