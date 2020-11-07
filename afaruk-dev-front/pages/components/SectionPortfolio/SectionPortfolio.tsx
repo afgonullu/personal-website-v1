@@ -1,11 +1,18 @@
 import React from "react"
 import Link from "next/link"
 import Icons from "./Icons"
+import SectionHeader from "../SectionHeader/SectionHeader"
 import { Card, Button, Container, CardGroup } from "react-bootstrap"
 import { Post } from "../../index"
 
 const SectionPortfolio: React.FC<{ portfolioPosts: Post[] }> = (props) => {
   const { portfolioPosts } = props
+
+  const copyText = {
+    title: "Recent Works",
+    text:
+      "Below you will see some of my featured works and finished projects. I design and develop each project using best practices and modern technologies such as React, Next.js, Node.js, Express, Bootstrap, etc.",
+  }
 
   let cards = []
   if (portfolioPosts == undefined) {
@@ -40,15 +47,10 @@ const SectionPortfolio: React.FC<{ portfolioPosts: Post[] }> = (props) => {
   return (
     <section className="section-portfolio text-light text-center my-3 py-3">
       <Container>
-        <div className="mx-5 px-5">
-          <h3>Recent Works</h3>
-          <p>
-            Below you will see some of my featured works and finished projects.
-            I design and develop each project using best practices and modern
-            technologies such as React, Next.js, Node.js, Express, Bootstrap,
-            etc.
-          </p>
-        </div>
+        <SectionHeader
+          title={copyText.title}
+          text={copyText.text}
+        ></SectionHeader>
         <CardGroup className="mb-3">{cards}</CardGroup>
         <p className="lead">
           <Link href="#">
