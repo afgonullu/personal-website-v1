@@ -1,6 +1,7 @@
 import Link from "next/link"
 import React from "react"
 import SiteNavbar from "../components/SiteNavbar/SiteNavbar"
+import SiteFooter from "../components/SiteFooter/SiteFooter"
 import { useRouter } from "next/router"
 import { getSinglePost } from "../api/ghost"
 import { Post } from "../index"
@@ -40,6 +41,7 @@ const PortfolioPost: React.FC<{ post: Post }> = (props) => {
         <h1>{post.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
       </Container>
+      <SiteFooter></SiteFooter>
     </React.Fragment>
   )
 }

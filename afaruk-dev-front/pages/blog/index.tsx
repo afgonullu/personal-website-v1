@@ -1,6 +1,7 @@
 import Link from "next/link"
 import React from "react"
 import SiteNavbar from "../components/SiteNavbar/SiteNavbar"
+import SiteFooter from "../components/SiteFooter/SiteFooter"
 import { getPostsByTag } from "../api/ghost"
 import { Post } from "../index"
 import { Container } from "react-bootstrap"
@@ -36,6 +37,7 @@ const Blog: React.FC<{ posts: Post[] }> = (props) => {
           })}
         </ul>
       </Container>
+      <SiteFooter></SiteFooter>
     </React.Fragment>
   )
 }

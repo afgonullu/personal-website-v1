@@ -1,6 +1,7 @@
 import Link from "next/link"
 import React from "react"
 import SiteNavbar from "../components/SiteNavbar/SiteNavbar"
+import SiteFooter from "../components/SiteFooter/SiteFooter"
 import { Container } from "react-bootstrap"
 
 // what i have done, tech stack, skills, timeline
@@ -15,6 +16,7 @@ const About: React.FC = (props) => {
         </Link>
         <h1>About Me</h1>
       </Container>
+      <SiteFooter></SiteFooter>
     </React.Fragment>
   )
 }
