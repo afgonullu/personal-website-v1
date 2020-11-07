@@ -22,9 +22,11 @@ const SectionHero: React.FC = (props) => {
                 className="mr-3 main-cta"
                 variant="secondary"
               >
-                Check Out My Works
+                See My Projects
               </Button>
-              <Link href="/about">My Resume</Link>
+              <Link href="/about">
+                <a className="secondary-link text-secondary">My Resume</a>
+              </Link>
             </Col>
             <Col md="5" className="d-none d-md-block">
               <img

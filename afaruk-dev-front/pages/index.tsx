@@ -6,6 +6,7 @@ import SectionPortfolio from "./components/SectionPortfolio/SectionPortfolio"
 import SectionAbout from "./components/SectionAbout/SectionAbout"
 import SectionBlog from "./components/SectionBlog/SectionBlog"
 import SectionContact from "./components/SectionContact/SectionContact"
+import SectionServices from "./components/SectionServices/SectionServices"
 import SiteFooter from "./components/SiteFooter/SiteFooter"
 import { Container, Row, Col } from "react-bootstrap"
 import { getFeaturedPostsByTag } from "./api/ghost"
@@ -39,6 +40,7 @@ const Home: React.FC<{ blogPosts: Post[]; portfolioPosts: Post[] }> = (
       <SectionPortfolio portfolioPosts={portfolioPosts}></SectionPortfolio>
       <SectionAbout></SectionAbout>
       <SectionBlog blogPosts={blogPosts}></SectionBlog>
+      <SectionServices></SectionServices>
       <SectionContact></SectionContact>
       <SiteFooter></SiteFooter>
     </React.Fragment>

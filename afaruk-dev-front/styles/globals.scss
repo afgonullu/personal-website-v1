@@ -68,6 +68,16 @@ section {
 @import "./sections/contact.scss";
 @import "./sections/footer.scss";
 
+.secondary-link {
+  @extend .lead;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .card-group {
   justify-content: center;
   .card {
@@ -86,8 +96,8 @@ section {
     }
 
     &:hover {
-      -webkit-transform: scale(1.02, 1.02);
-      transform: scale(1.02, 1.02);
+      -webkit-transform: translateY(-4px);
+      transform: translateY(-4px);
     }
   }
 }

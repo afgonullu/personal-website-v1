@@ -20,7 +20,7 @@ const SectionBlog: React.FC<{ blogPosts: Post[] }> = (props) => {
     cards = blogPosts.map((blog, i) => {
       return (
         <Card
-          bg="info"
+          bg="light"
           text="dark"
           className="text-center m-2"
           key={blog.title}
@@ -43,16 +43,16 @@ const SectionBlog: React.FC<{ blogPosts: Post[] }> = (props) => {
   }
 
   return (
-    <section className="section-blog text-light text-center my-3 py-3">
+    <section className="section-blog text-light text-center">
       <Container>
         <SectionHeader
           title={copyText.title}
           text={copyText.text}
         ></SectionHeader>
-        <CardGroup className="mb-3">{cards}</CardGroup>
+        <CardGroup className="mb-4">{cards}</CardGroup>
         <p className="lead">
-          <Link href="#">
-            <span>
+          <Link href="/blog">
+            <span className="text-danger secondary-link">
               There are More Articles{" "}
               <svg
                 width="1em"

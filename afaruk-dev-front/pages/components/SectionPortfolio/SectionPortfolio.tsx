@@ -9,7 +9,7 @@ const SectionPortfolio: React.FC<{ portfolioPosts: Post[] }> = (props) => {
   const { portfolioPosts } = props
 
   const copyText = {
-    title: "Recent Works",
+    title: "Recent Projects",
     text:
       "Below you will see some of my featured works and finished projects. I design and develop each project using best practices and modern technologies such as React, Next.js, Node.js, Express, Bootstrap, etc.",
   }
@@ -33,11 +33,11 @@ const SectionPortfolio: React.FC<{ portfolioPosts: Post[] }> = (props) => {
           ></img>
           <Icons portfolio={portfolio} />
           <Card.Body>
-            <Card.Title className="text-danger">{portfolio.title}</Card.Title>
+            <Card.Title className="text-primary">{portfolio.title}</Card.Title>
             <Card.Text>{portfolio.custom_excerpt}</Card.Text>
           </Card.Body>
           <Card.Footer>
-            <Button variant="outline-danger">See Showcase</Button>
+            <Button variant="outline-primary">See Showcase</Button>
           </Card.Footer>
         </Card>
       )
@@ -45,17 +45,17 @@ const SectionPortfolio: React.FC<{ portfolioPosts: Post[] }> = (props) => {
   }
 
   return (
-    <section className="section-portfolio text-light text-center my-3 py-3">
+    <section className="section-portfolio text-light text-center">
       <Container>
         <SectionHeader
           title={copyText.title}
           text={copyText.text}
         ></SectionHeader>
-        <CardGroup className="mb-3">{cards}</CardGroup>
-        <p className="lead">
-          <Link href="#">
+        <CardGroup className="mb-4">{cards}</CardGroup>
+        <p className="secondary-link text-secondary">
+          <Link href="/portfolio">
             <span>
-              Check Out My Full Portfolio{" "}
+              Full List of Projects{" "}
               <svg
                 width="1em"
                 height="1em"
