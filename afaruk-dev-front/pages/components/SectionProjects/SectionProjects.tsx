@@ -5,7 +5,7 @@ import SectionHeader from "../SectionHeader/SectionHeader"
 import { Card, Button, Container, CardGroup } from "react-bootstrap"
 import { Post } from "../../index"
 
-const SectionPortfolio: React.FC<{ portfolioPosts: Post[] }> = (props) => {
+const SectionProjects: React.FC<{ portfolioPosts: Post[] }> = (props) => {
   const { portfolioPosts } = props
 
   const copyText = {
@@ -53,7 +53,7 @@ const SectionPortfolio: React.FC<{ portfolioPosts: Post[] }> = (props) => {
         ></SectionHeader>
         <CardGroup className="mb-4">{cards}</CardGroup>
         <p className="secondary-link text-secondary">
-          <Link href="/portfolio">
+          <Link href="/projects">
             <span>
               Full List of Projects{" "}
               <svg
@@ -77,4 +77,4 @@ const SectionPortfolio: React.FC<{ portfolioPosts: Post[] }> = (props) => {
   )
 }
 
-export default SectionPortfolio
+export default SectionProjects

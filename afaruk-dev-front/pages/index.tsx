@@ -1,9 +1,9 @@
 import React from "react"
 import SiteNavbar from "./components/SiteNavbar/SiteNavbar"
 import SectionHero from "./components/SectionHero/SectionHero"
-import SectionPortfolio from "./components/SectionPortfolio/SectionPortfolio"
+import SectionProjects from "./components/SectionProjects/SectionProjects"
 import SectionAbout from "./components/SectionAbout/SectionAbout"
-import SectionBlog from "./components/SectionBlog/SectionBlog"
+import SectionWritings from "./components/SectionWritings/SectionWritings"
 import SectionContact from "./components/SectionContact/SectionContact"
 import SectionServices from "./components/SectionServices/SectionServices"
 import SiteFooter from "./components/SiteFooter/SiteFooter"
@@ -35,9 +35,9 @@ const Home: React.FC<{ blogPosts: Post[]; portfolioPosts: Post[] }> = (
     <React.Fragment>
       <SiteNavbar></SiteNavbar>
       <SectionHero></SectionHero>
-      <SectionPortfolio portfolioPosts={portfolioPosts}></SectionPortfolio>
+      <SectionProjects portfolioPosts={portfolioPosts}></SectionProjects>
       <SectionAbout></SectionAbout>
-      <SectionBlog blogPosts={blogPosts}></SectionBlog>
+      <SectionWritings blogPosts={blogPosts}></SectionWritings>
       <SectionServices></SectionServices>
       <SectionContact></SectionContact>
       <SiteFooter></SiteFooter>

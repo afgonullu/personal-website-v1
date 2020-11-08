@@ -21,7 +21,7 @@ const SiteNavbar: React.FC = (props) => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
-              <Nav.Link href="/blog">
+              <Nav.Link href="/writings">
                 <svg
                   width="1em"
                   height="1em"
@@ -35,9 +35,9 @@ const SiteNavbar: React.FC = (props) => {
                     d="M13.498.795l.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"
                   />
                 </svg>
-                Blog
+                Writings
               </Nav.Link>
-              <Nav.Link href="/portfolio">
+              <Nav.Link href="/projects">
                 <svg
                   width="1em"
                   height="1em"
@@ -55,7 +55,7 @@ const SiteNavbar: React.FC = (props) => {
                     d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5v2.384l-7.614 2.03a1.5 1.5 0 0 1-.772 0L0 6.884V4.5zM1.5 4a.5.5 0 0 0-.5.5v1.616l6.871 1.832a.5.5 0 0 0 .258 0L15 6.116V4.5a.5.5 0 0 0-.5-.5h-13zM5 2.5A1.5 1.5 0 0 1 6.5 1h3A1.5 1.5 0 0 1 11 2.5V3h-1v-.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5V3H5v-.5z"
                   />
                 </svg>
-                Portfolio
+                Projects
               </Nav.Link>
               <Nav.Link href="/workflow">
                 <svg

@@ -19,7 +19,7 @@ const SectionHero: React.FC = (props) => {
               </p>
               <div className="buttons">
                 <Button
-                  href="/portfolio"
+                  href="/projects"
                   className="mr-3 main-cta"
                   variant="secondary"
                 >

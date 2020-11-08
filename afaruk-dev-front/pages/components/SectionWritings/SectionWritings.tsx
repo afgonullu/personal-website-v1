@@ -4,13 +4,13 @@ import SectionHeader from "../SectionHeader/SectionHeader"
 import { Card, Button, Container, CardGroup } from "react-bootstrap"
 import { Post } from "../../index"
 
-const SectionBlog: React.FC<{ blogPosts: Post[] }> = (props) => {
+const SectionWritings: React.FC<{ blogPosts: Post[] }> = (props) => {
   const { blogPosts } = props
 
   const copyText = {
-    title: "You Might Be Interested To Read",
+    title: "Recent Writings",
     text:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro cumque facere nobis. Magni inventore, id quia consequatur rerum, nostrum soluta voluptates libero nobis quibusdam repellat et quas quaerat dignissimos.",
+      "As a good practice, I try to document everything happening around me: my reflections, decision making processes, routines, etc. When I solve a problem, I formulise the solution in a repeatable manner and document it. Therefore, My writings may vary a lot, but you will find them very useful.",
   }
 
   let cards = []
@@ -35,7 +35,7 @@ const SectionBlog: React.FC<{ blogPosts: Post[] }> = (props) => {
             <Card.Text>{blog.custom_excerpt}</Card.Text>
           </Card.Body>
           <Card.Footer>
-            <Button variant="outline-danger">See Showcase</Button>
+            <Button variant="outline-danger">Read the Post</Button>
           </Card.Footer>
         </Card>
       )
@@ -51,7 +51,7 @@ const SectionBlog: React.FC<{ blogPosts: Post[] }> = (props) => {
         ></SectionHeader>
         <CardGroup className="mb-4">{cards}</CardGroup>
         <p className="lead">
-          <Link href="/blog">
+          <Link href="/writings">
             <span className="text-danger secondary-link">
               There are More Articles{" "}
               <svg
@@ -75,4 +75,4 @@ const SectionBlog: React.FC<{ blogPosts: Post[] }> = (props) => {
   )
 }
 
-export default SectionBlog
+export default SectionWritings
