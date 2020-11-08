@@ -56,8 +56,9 @@ section {
     justify-content: center;
     align-items: center;
   }
-  @extend .my-5;
-  @extend .py-5;
+  @extend .py-3;
+  @extend .mt-5;
+  @extend .mb-3;
 }
 
 @import "./sections/header.scss";
@@ -65,6 +66,7 @@ section {
 @import "./sections/portfolio.scss";
 @import "./sections/about.scss";
 @import "./sections/blog.scss";
+@import "./sections/services.scss";
 @import "./sections/contact.scss";
 @import "./sections/footer.scss";
 

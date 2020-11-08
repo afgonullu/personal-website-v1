@@ -1,4 +1,3 @@
-import Link from "next/link"
 import React from "react"
 import SiteNavbar from "./components/SiteNavbar/SiteNavbar"
 import SectionHero from "./components/SectionHero/SectionHero"
@@ -8,7 +7,6 @@ import SectionBlog from "./components/SectionBlog/SectionBlog"
 import SectionContact from "./components/SectionContact/SectionContact"
 import SectionServices from "./components/SectionServices/SectionServices"
 import SiteFooter from "./components/SiteFooter/SiteFooter"
-import { Container, Row, Col } from "react-bootstrap"
 import { getFeaturedPostsByTag } from "./api/ghost"
 
 export type Post = {

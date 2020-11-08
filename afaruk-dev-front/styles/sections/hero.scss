@@ -1,4 +1,12 @@
 .section-hero {
+  .buttons {
+    display: flex;
+    align-items: center;
+
+    .secondary-link {
+      font-size: 1rem;
+    }
+  }
   img {
     border-radius: 2.441rem;
     max-width: 360px;

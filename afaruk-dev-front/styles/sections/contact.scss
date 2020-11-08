@@ -2,5 +2,35 @@
   .container {
     box-shadow: $shadow;
     border-radius: 1rem;
+
+    .contact-title {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .contact-text {
+      display: flex;
+      justify-content: center;
+    }
+
+    .contact-cta {
+      display: flex;
+      justify-content: end;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-contact {
+    .container {
+      .contact-title {
+        justify-content: center;
+      }
+
+      .contact-cta {
+        margin-top: 2.441rem;
+        justify-content: center;
+      }
+    }
   }
 }
