@@ -1,42 +1,77 @@
-import Link from "next/link"
 import React from "react"
 import SiteNavbar from "../components/SiteNavbar/SiteNavbar"
+import PageHeader from "../components/PageHeader/PageHeader"
 import SiteFooter from "../components/SiteFooter/SiteFooter"
-import { getPostsByTag } from "../api/ghost"
+import IconsGenerator from "../components/IconsGenerator/Icons"
+import { getAllTags, getPostsByTag } from "../api/ghost"
 import { Post } from "../index"
-import { Container } from "react-bootstrap"
+import { Row, Col, Container } from "react-bootstrap"
+import Link from "next/link"
 
 export const getStaticProps = async ({ params }) => {
-  const posts = await getPostsByTag("portfolio")
-  console.log(posts)
+  const posts = await getPostsByTag("projects")
+  const tags = await getAllTags()
   return {
-    props: { posts },
+    props: { posts, tags },
     revalidate: 10,
   }
 }
 
-const Portfolio: React.FC<{ posts: Post[] }> = (props) => {
-  const { posts } = props
+const Portfolio: React.FC<{ posts: Post[]; tags: [{ name: string }] }> = (
+  props
+) => {
+  const { posts, tags } = props
+
+  const pageHeader = {
+    title: "Projects So Far",
+    subtitle:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quidem sequi, repudiandae mollitia doloribus eligendi a quibusdam sed deleniti voluptatem aspernatur vero ipsum sapiente corporis. Tempora, eius fuga odit vero ipsam quod doloribus ea quasi ducimus inventore adipisci amet repudiandae quibusdam consequatur sed optio, harum culpa labore neque error! Adipisci.",
+  }
 
   return (
     <React.Fragment>
       <SiteNavbar></SiteNavbar>
+      <PageHeader
+        title={pageHeader.title}
+        subtitle={pageHeader.subtitle}
+      ></PageHeader>
       <Container>
-        <Link href="/">
-          <a>Go Back</a>
-        </Link>
-        <h1>Portfolio Home</h1>
-        <ul>
-          {posts.map((post, index) => {
+        <ul className="tag-cloud">
+          {tags.map((tag, index) => {
             return (
-              <li key={post.slug}>
-                <Link href="portfolio/[slug]" as={`/portfolio/${post.slug}`}>
-                  <a>{post.title}</a>
+              <li key={tag.name} className="tag-cloud-item">
+                <Link href="#">
+                  <a>{tag.name}</a>
                 </Link>
               </li>
             )
           })}
         </ul>
+        <div className="posts-list">
+          {posts.map((post, index) => {
+            return (
+              <Row className="posts-list-item d-flex align-items-baseline">
+                <Col md="1" className="post-tech">
+                  <IconsGenerator portfolio={post}></IconsGenerator>
+                </Col>
+                <Col md="3">
+                  <Link href="projects/[slug]" as={`/projects/${post.slug}`}>
+                    <h5 className="post-title">{post.title}</h5>
+                  </Link>
+                </Col>
+                <Col md="8">
+                  <p className="post-excerpt">{post.custom_excerpt}</p>
+                </Col>
+              </Row>
+
+              // <li key={post.slug}>
+              //   <Link href="projects/[slug]" as={`/projects/${post.slug}`}>
+              //     <a>{post.title}</a>
+              //   </Link>
+              // </li>
+            )
+          })}
+        </div>
       </Container>
       <SiteFooter></SiteFooter>
     </React.Fragment>

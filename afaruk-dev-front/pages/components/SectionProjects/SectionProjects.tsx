@@ -1,6 +1,6 @@
 import React from "react"
 import Link from "next/link"
-import Icons from "./Icons"
+import IconsGenerator from "../IconsGenerator/Icons"
 import SectionHeader from "../SectionHeader/SectionHeader"
 import { Card, Button, Container, CardGroup } from "react-bootstrap"
 import { Post } from "../../index"
@@ -26,18 +26,26 @@ const SectionProjects: React.FC<{ portfolioPosts: Post[] }> = (props) => {
           className="text-center m-2"
           key={portfolio.title}
         >
-          <img
-            src="https://source.unsplash.com/random/320x160"
-            className="card-img-top"
-            alt="img"
-          ></img>
-          <Icons portfolio={portfolio} />
+          <div className="img-parent">
+            <img
+              src="https://source.unsplash.com/random/320x160"
+              className="card-img-top"
+              alt="img"
+            ></img>
+            <div className="card-img-overlay">
+              <IconsGenerator portfolio={portfolio} />
+            </div>
+          </div>
           <Card.Body>
             <Card.Title className="text-primary">{portfolio.title}</Card.Title>
             <Card.Text>{portfolio.custom_excerpt}</Card.Text>
           </Card.Body>
           <Card.Footer>
-            <Button variant="outline-primary">See Showcase</Button>
+            <Button variant="outline-primary">
+              <Link href="projects/[slug]" as={`/projects/${portfolio.slug}`}>
+                <p>See Showcase</p>
+              </Link>
+            </Button>
           </Card.Footer>
         </Card>
       )

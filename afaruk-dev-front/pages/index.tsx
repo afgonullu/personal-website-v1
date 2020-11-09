@@ -18,8 +18,8 @@ export type Post = {
 }
 
 export const getStaticProps = async ({ params }) => {
-  const blogPosts = await getFeaturedPostsByTag("blog")
-  const portfolioPosts = await getFeaturedPostsByTag("portfolio")
+  const blogPosts = await getFeaturedPostsByTag("writings")
+  const portfolioPosts = await getFeaturedPostsByTag("projects")
   return {
     props: { blogPosts, portfolioPosts },
     revalidate: 10,

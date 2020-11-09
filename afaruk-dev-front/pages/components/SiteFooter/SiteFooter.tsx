@@ -74,8 +74,8 @@ const SiteFooter: React.FC = (props) => {
           <Col md="3">
             <Nav defaultActiveKey="/home" className="flex-column">
               <h6>Site Map</h6>
-              <Nav.Link href="/blog">Blog</Nav.Link>
-              <Nav.Link href="/portfolio">Portfolio</Nav.Link>
+              <Nav.Link href="/writings">Writings</Nav.Link>
+              <Nav.Link href="/projects">Projects</Nav.Link>
               <Nav.Link href="/workflow">Workflow</Nav.Link>
               <Nav.Link href="/about">About Me</Nav.Link>
               <Nav.Link href="/contact">Get in Touch</Nav.Link>

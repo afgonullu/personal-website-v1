@@ -9,7 +9,7 @@ $theme-colors: (
   "info": #eaf9d9,
   "warning": #c7ef00,
   "danger": #c80428,
-  "light": #f5f5f5,
+  "light": #e0e0e0,
   "dark": #0a0a0a,
 ) !default;
 
@@ -63,9 +63,9 @@ section {
 
 @import "./sections/header.scss";
 @import "./sections/hero.scss";
-@import "./sections/portfolio.scss";
+@import "./sections/projects.scss";
 @import "./sections/about.scss";
-@import "./sections/blog.scss";
+@import "./sections/writings.scss";
 @import "./sections/services.scss";
 @import "./sections/contact.scss";
 @import "./sections/footer.scss";
@@ -95,6 +95,9 @@ section {
     .card-footer {
       background-color: inherit;
       border: none;
+      p {
+        margin: 0;
+      }
     }
 
     &:hover {
@@ -109,19 +112,77 @@ section {
   border-radius: 0;
 }
 
-.card-img-overlay {
+.posts-list {
+  margin-bottom: 2.441rem;
+  .posts-list-item {
+    padding: 2rem;
+    border: 1px solid rgba(234, 249, 217, 0.5);
+    border-bottom: none;
+
+    &:last-child {
+      border-bottom: 1px solid rgba(234, 249, 217, 0.5);
+    }
+
+    .post-tech {
+      svg {
+        margin-right: 0.512rem;
+      }
+    }
+
+    .post-title {
+      padding: 0;
+      cursor: pointer;
+      color: #fca311;
+    }
+
+    .post-excerpt {
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .posts-list-item:hover {
+    border-left: 5px solid rgb(234, 249, 217);
+    background: rgba(245, 245, 245, 0.1);
+  }
+}
+
+.tag-cloud {
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto 1.953rem auto;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  right: auto;
-  bottom: auto;
-  padding: 0.512rem;
-  background: rgba(0, 0, 0, 0.4);
-  border: none;
-  border-radius: 0;
-  svg,
-  img {
-    margin-bottom: 0.375rem;
+  list-style: none;
+  font-size: 0.8rem;
+  padding: 0;
+
+  .tag-cloud-item {
+    border: 1px solid #fca311;
+    border-radius: 2rem;
+    margin: 0.8rem 0.8rem 0 0;
+    padding: 0.262rem 0.8rem;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.page-main-content {
+  padding-left: 3.815rem;
+  padding-right: 3.815rem;
+}
+
+.breadcrumb {
+  font-size: 0.8rem;
+  a {
+    color: #0a0a0a;
+
+    &:hover {
+      color: #c80428;
+    }
   }
 }
 
@@ -133,4 +194,8 @@ section {
 
 h3 {
   font-size: 1.953rem;
+}
+
+.img-parent {
+  position: relative;
 }

@@ -19,6 +19,16 @@ const api = new GhostContentAPI({
       });
   }
 
+  export async function getAllTags() {
+    return await api.tags
+      .browse({
+        limit: "all"
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  }
+
   export async function getFeaturedPostsByTag(tag) {
     return await api.posts
       .browse({

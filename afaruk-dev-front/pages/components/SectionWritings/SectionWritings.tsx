@@ -35,7 +35,11 @@ const SectionWritings: React.FC<{ blogPosts: Post[] }> = (props) => {
             <Card.Text>{blog.custom_excerpt}</Card.Text>
           </Card.Body>
           <Card.Footer>
-            <Button variant="outline-danger">Read the Post</Button>
+            <Button variant="outline-danger">
+              <Link href="writings/[slug]" as={`/writings/${blog.slug}`}>
+                <p>Read More</p>
+              </Link>
+            </Button>
           </Card.Footer>
         </Card>
       )
