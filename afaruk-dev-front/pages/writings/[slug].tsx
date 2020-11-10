@@ -27,11 +27,6 @@ export const getStaticPaths = () => {
 const WritingsPost: React.FC<{ post: Post }> = (props) => {
   const { post } = props
 
-  const pageHeader = {
-    title: post.title,
-    subtitle: post.custom_excerpt,
-  }
-
   const router = useRouter()
 
   if (router.isFallback) {
@@ -43,8 +38,8 @@ const WritingsPost: React.FC<{ post: Post }> = (props) => {
       <SiteNavbar></SiteNavbar>
 
       <PageHeader
-        title={pageHeader.title}
-        subtitle={pageHeader.subtitle}
+        title={post.title}
+        subtitle={post.custom_excerpt}
       ></PageHeader>
       <Container>
         <Breadcrumb className="text-dark">
