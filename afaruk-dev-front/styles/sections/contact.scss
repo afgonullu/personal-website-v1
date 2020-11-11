@@ -1,3 +1,17 @@
+.contact-page-main-content {
+  .social-icons-item {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  svg {
+    cursor: pointer;
+    fill: #f5f5f5;
+    width: 39.06px;
+    height: 39.6px;
+    margin-right: 1.953rem;
+  }
+}
+
 .section-contact {
   .container {
     box-shadow: $shadow;

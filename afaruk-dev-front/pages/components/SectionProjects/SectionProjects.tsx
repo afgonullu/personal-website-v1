@@ -11,7 +11,7 @@ const SectionProjects: React.FC<{ portfolioPosts: Post[] }> = (props) => {
   const copyText = {
     title: "Recent Projects",
     text:
-      "Below you will see some of my featured works and finished projects. I design and develop each project using best practices and modern technologies such as React, Next.js, Node.js, Express, Bootstrap, etc.",
+      "Below are some of the projects I want you to see. I always aim for the best and always design and develop using best practices and modern technologies. One thing to mention is that I love JavaScript. Mostly I use Typescript, React, Next.js, Node.js, Express and Bootstrap in my projects.",
   }
 
   let cards = []

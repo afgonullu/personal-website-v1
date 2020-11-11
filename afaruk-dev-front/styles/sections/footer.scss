@@ -1,3 +1,23 @@
+.github:hover {
+  fill: #181717;
+}
+
+.linkedin:hover {
+  fill: #0077b5;
+}
+
+.stackoverflow:hover {
+  fill: #fe7a16;
+}
+
+.twitter:hover {
+  fill: #1da1f2;
+}
+
+.mail:hover {
+  fill: #d14836;
+}
+
 footer {
   border-top: 1px solid rgba(245, 245, 245, 0.05);
   padding-top: 1.953rem;
@@ -9,32 +29,18 @@ footer {
     font-weight: 700;
   }
 
+  .social-icons-item {
+    span {
+      display: none;
+    }
+  }
+
   svg {
+    cursor: pointer;
     fill: #f5f5f5;
     width: 31.25px;
     height: 31.25px;
     margin-right: 1.25rem;
-    cursor: pointer;
-  }
-
-  .github:hover {
-    fill: #181717;
-  }
-
-  .linkedin:hover {
-    fill: #0077b5;
-  }
-
-  .stackoverflow:hover {
-    fill: #fe7a16;
-  }
-
-  .twitter:hover {
-    fill: #1da1f2;
-  }
-
-  .mail:hover {
-    fill: #d14836;
   }
 
   .attribute {

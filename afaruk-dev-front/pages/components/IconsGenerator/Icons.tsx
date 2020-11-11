@@ -17,6 +17,7 @@ const IconsGenerator: React.FC<{ portfolio: Post }> = (props) => {
               case "javascript":
                 return (
                   <svg
+                    key={tag.name}
                     fill="#F7DF1E"
                     role="img"
                     viewBox="0 0 24 24"
@@ -32,6 +33,7 @@ const IconsGenerator: React.FC<{ portfolio: Post }> = (props) => {
               case "html":
                 return (
                   <svg
+                    key={tag.name}
                     fill="#E34F26"
                     width="16px"
                     height="16px"
@@ -47,6 +49,7 @@ const IconsGenerator: React.FC<{ portfolio: Post }> = (props) => {
               case "node":
                 return (
                   <svg
+                    key={tag.name}
                     fill="#339933"
                     width="16px"
                     height="16px"
@@ -62,6 +65,7 @@ const IconsGenerator: React.FC<{ portfolio: Post }> = (props) => {
               case "react":
                 return (
                   <svg
+                    key={tag.name}
                     fill="#61DAFB"
                     width="16px"
                     height="16px"
@@ -77,6 +81,7 @@ const IconsGenerator: React.FC<{ portfolio: Post }> = (props) => {
               case "next":
                 return (
                   <svg
+                    key={tag.name}
                     fill="#000000"
                     width="16px"
                     height="16px"
@@ -92,6 +97,7 @@ const IconsGenerator: React.FC<{ portfolio: Post }> = (props) => {
               case "sass":
                 return (
                   <svg
+                    key={tag.name}
                     fill="#CC6699"
                     width="16px"
                     height="16px"
@@ -107,6 +113,7 @@ const IconsGenerator: React.FC<{ portfolio: Post }> = (props) => {
               case "bootstrap":
                 return (
                   <svg
+                    key={tag.name}
                     fill="#563D7C"
                     width="16px"
                     height="16px"
@@ -122,6 +129,7 @@ const IconsGenerator: React.FC<{ portfolio: Post }> = (props) => {
               case "css":
                 return (
                   <svg
+                    key={tag.name}
                     fill="#1572B6"
                     width="16px"
                     height="16px"
@@ -137,6 +145,7 @@ const IconsGenerator: React.FC<{ portfolio: Post }> = (props) => {
               case "heroku":
                 return (
                   <svg
+                    key={tag.name}
                     fill="#430098"
                     width="16px"
                     height="16px"
@@ -152,6 +161,7 @@ const IconsGenerator: React.FC<{ portfolio: Post }> = (props) => {
               case "vercel":
                 return (
                   <svg
+                    key={tag.name}
                     fill="#000000"
                     width="16px"
                     height="16px"
@@ -167,6 +177,7 @@ const IconsGenerator: React.FC<{ portfolio: Post }> = (props) => {
               default:
                 return (
                   <img
+                    key={tag.name}
                     alt="Tech Stack"
                     src="/assets/logo.svg"
                     width="26.652px"

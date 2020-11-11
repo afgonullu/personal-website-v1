@@ -19,7 +19,7 @@ const Workflow: React.FC<{ page: Post }> = (props) => {
   const pageHeader = {
     title: "Workflow",
     subtitle:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam ex blanditiis dicta dolor repudiandae velit voluptas numquam odio est repellendus quibusdam aut, laudantium nobis placeat excepturi obcaecati sed harum quisquam magnam asperiores laborum quos incidunt! Repellat ipsa rerum molestias culpa veniam! At, voluptatibus? Et architecto nostrum, molestiae inventore quam eum.",
+      "Success, Quality, Repeatability and Customer Satisfaction comes from a well defined process. Such process would be simple, robust, efficient, documented and well communicated. Because of a good process, you can do, measure and improve. It makes every stakeholder's life so much easier. I aim to keep everything transparent, clearly identified and documented for myself as well as for my customers.",
   }
 
   return (

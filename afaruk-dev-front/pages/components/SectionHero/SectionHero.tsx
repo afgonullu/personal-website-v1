@@ -25,8 +25,10 @@ const SectionHero: React.FC = (props) => {
                 >
                   See My Projects
                 </Button>
-                <Link href="/about">
-                  <a className="secondary-link text-secondary">My Resume</a>
+                <Link href="/assets/docs/resume_afgonullu.pdf">
+                  <a target="_blank" className="secondary-link text-secondary">
+                    My Resume
+                  </a>
                 </Link>
               </div>
             </Col>

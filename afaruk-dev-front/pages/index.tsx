@@ -15,6 +15,8 @@ export type Post = {
   tags: [{ name: string }]
   custom_excerpt: string
   html: string
+  feature_image: string
+  reading_time: number
 }
 
 export const getStaticProps = async ({ params }) => {

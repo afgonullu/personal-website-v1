@@ -25,7 +25,7 @@ const Portfolio: React.FC<{ posts: Post[]; tags: [{ name: string }] }> = (
   const pageHeader = {
     title: "Projects So Far",
     subtitle:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quidem sequi, repudiandae mollitia doloribus eligendi a quibusdam sed deleniti voluptatem aspernatur vero ipsum sapiente corporis. Tempora, eius fuga odit vero ipsam quod doloribus ea quasi ducimus inventore adipisci amet repudiandae quibusdam consequatur sed optio, harum culpa labore neque error! Adipisci.",
+      "Check out projects that I have completed and been working on. You will find the technologies I used, a link to a live demo and showcase documentation for each project. Still want to know more? Contact me for more information.",
   }
 
   return (
@@ -36,7 +36,7 @@ const Portfolio: React.FC<{ posts: Post[]; tags: [{ name: string }] }> = (
         subtitle={pageHeader.subtitle}
       ></PageHeader>
       <Container>
-        <ul className="tag-cloud">
+        {/* <ul className="tag-cloud">
           {tags.map((tag, index) => {
             return (
               <li key={tag.name} className="tag-cloud-item">
@@ -46,7 +46,7 @@ const Portfolio: React.FC<{ posts: Post[]; tags: [{ name: string }] }> = (
               </li>
             )
           })}
-        </ul>
+        </ul> */}
         <div className="posts-list">
           {posts.map((post, index) => {
             return (

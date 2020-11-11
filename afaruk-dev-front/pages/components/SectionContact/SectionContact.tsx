@@ -13,11 +13,13 @@ const SectionContact: React.FC = (props) => {
               <span className="text-decoration-underline">Your Project</span>
             </p>
           </Col>
-          <Col md="6" className="contact-text">
-            Interested in Working Together?{" "}
+          <Col md="6" className="contact-text text-center">
+            Interested in Working Together? You can easily get in touch with me
+            and we can discuss your next project; a website, an application, or
+            everything in between.
           </Col>
           <Col md="3" className="contact-cta">
-            <Button variant="primary" size="lg">
+            <Button variant="primary" size="lg" href="/contact">
               Get in Touch
             </Button>
           </Col>

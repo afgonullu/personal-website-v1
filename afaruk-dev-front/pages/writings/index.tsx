@@ -7,6 +7,7 @@ import { getAllTags, getPostsByTag } from "../api/ghost"
 import { Post } from "../index"
 import { Col, Container, Row } from "react-bootstrap"
 import IconsGenerator from "pages/components/IconsGenerator/Icons"
+import { basename } from "path"
 
 export const getStaticProps = async ({ params }) => {
   const posts = await getPostsByTag("writings")
@@ -22,7 +23,7 @@ const Blog: React.FC<{ posts: Post[]; tags: [{ name: string }] }> = (props) => {
   const pageHeader = {
     title: "Writings",
     subtitle:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dicta laboriosam vel alias asperiores, quasi excepturi doloremque sit consectetur quibusdam? Sit aut perspiciatis labore temporibus quibusdam iure, omnis blanditiis odit illo unde deleniti ipsum velit neque asperiores, natus ipsa beatae? Ratione velit mollitia possimus vero nostrum commodi nemo doloribus nisi.",
+      'Benjamin Franklin said: "Either write something worth reading or do something worth writing." I try my best to live by it. I strive to do things worth writing about, then write about them. Hopefully my writings are worth reading.',
   }
 
   return (
@@ -33,7 +34,7 @@ const Blog: React.FC<{ posts: Post[]; tags: [{ name: string }] }> = (props) => {
         subtitle={pageHeader.subtitle}
       ></PageHeader>
       <Container>
-        <ul className="tag-cloud">
+        {/* <ul className="tag-cloud">
           {tags.map((tag, index) => {
             return (
               <li key={tag.name} className="tag-cloud-item">
@@ -43,20 +44,25 @@ const Blog: React.FC<{ posts: Post[]; tags: [{ name: string }] }> = (props) => {
               </li>
             )
           })}
-        </ul>
-        <div className="posts-list">
+        </ul> */}
+        <div className="writings posts-list">
           {posts.map((post, index) => {
             return (
               <Row className="posts-list-item d-flex align-items-baseline">
-                <Col md="1" className="post-tech">
-                  <IconsGenerator portfolio={post}></IconsGenerator>
-                </Col>
+                <Col
+                  md="2"
+                  className="post-tech"
+                  style={{
+                    background: `url(${post.feature_image}) auto top center`,
+                  }}
+                ></Col>
                 <Col md="3">
                   <Link href="writings/[slug]" as={`/writings/${post.slug}`}>
                     <h5 className="post-title">{post.title}</h5>
                   </Link>
+                  <p>{post.reading_time}</p>
                 </Col>
-                <Col md="8">
+                <Col md="7">
                   <p className="post-excerpt">{post.custom_excerpt}</p>
                 </Col>
               </Row>

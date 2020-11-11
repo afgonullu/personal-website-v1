@@ -57,7 +57,7 @@ const SectionWritings: React.FC<{ blogPosts: Post[] }> = (props) => {
         <p className="lead">
           <Link href="/writings">
             <span className="text-danger secondary-link">
-              There are More Articles{" "}
+              Full List of Writings{" "}
               <svg
                 width="1em"
                 height="1em"
