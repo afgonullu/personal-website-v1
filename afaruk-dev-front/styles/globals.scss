@@ -126,10 +126,6 @@ section {
       border-bottom: 1px solid rgba(234, 249, 217, 0.5);
     }
 
-    .read-time {
-      font-size: 0.8rem;
-    }
-
     .post-tech {
       svg {
         margin-right: 0.512rem;
@@ -191,6 +187,10 @@ section {
       color: #c80428;
     }
   }
+}
+
+.read-time {
+  font-size: 0.8rem;
 }
 
 @media screen and (min-width: 1200px) {

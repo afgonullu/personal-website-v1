@@ -40,6 +40,12 @@ const SectionProjects: React.FC<{ portfolioPosts: Post[] }> = (props) => {
               <Card.Title className="text-primary">
                 {portfolio.title}
               </Card.Title>
+              <Card.Text className="text-muted read-time">
+                {portfolio.reading_time} min Read |{" "}
+                {portfolio.updated_at.slice(0, 4)}.
+                {portfolio.updated_at.slice(5, 7)}.
+                {portfolio.updated_at.slice(8, 10)}
+              </Card.Text>
               <Card.Text>{portfolio.custom_excerpt}</Card.Text>
             </Card.Body>
             <Card.Footer></Card.Footer>

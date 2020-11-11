@@ -15,7 +15,7 @@ const SectionServices: React.FC = (props) => {
         text={copyText.text}
       ></SectionHeader>
       <div className="services-icons d-flex justify-content-center flex-wrap">
-        <a href="/workflow#process-analysis">
+        <a href="/workflow#discovery">
           <div className="d-flex flex-column justify-content-center align-items-center p-3 m-3">
             <svg
               width="2.441em"

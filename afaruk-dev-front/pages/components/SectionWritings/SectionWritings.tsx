@@ -32,6 +32,10 @@ const SectionWritings: React.FC<{ blogPosts: Post[] }> = (props) => {
             ></img>
             <Card.Body>
               <Card.Title className="text-danger">{blog.title}</Card.Title>
+              <Card.Text className="text-muted read-time">
+                {blog.reading_time} min Read | {blog.updated_at.slice(0, 4)}.
+                {blog.updated_at.slice(5, 7)}.{blog.updated_at.slice(8, 10)}
+              </Card.Text>
               <Card.Text>{blog.custom_excerpt}</Card.Text>
             </Card.Body>
             <Card.Footer></Card.Footer>

@@ -64,7 +64,10 @@ const Blog: React.FC<{ posts: Post[]; tags: [{ name: string }] }> = (props) => {
                         </Link>
                       </Card.Title>
                       <Card.Text className="text-muted read-time">
-                        {post.reading_time} min Read
+                        {post.reading_time} min Read |{" "}
+                        {post.updated_at.slice(0, 4)}.
+                        {post.updated_at.slice(5, 7)}.
+                        {post.updated_at.slice(8, 10)}
                       </Card.Text>
                       <Card.Text className="post-excerpt">
                         {post.custom_excerpt}

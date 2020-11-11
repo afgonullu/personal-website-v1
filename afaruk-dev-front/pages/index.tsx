@@ -17,6 +17,7 @@ export type Post = {
   html: string
   feature_image: string
   reading_time: number
+  updated_at: string
 }
 
 export const getStaticProps = async ({ params }) => {

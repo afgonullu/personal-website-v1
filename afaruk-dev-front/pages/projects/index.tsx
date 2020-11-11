@@ -59,7 +59,9 @@ const Portfolio: React.FC<{ posts: Post[]; tags: [{ name: string }] }> = (
                     <h5 className="post-title">{post.title}</h5>
                   </Link>
                   <p className="text-muted read-time">
-                    {post.reading_time} min Read
+                    {post.reading_time} min Read | {post.updated_at.slice(0, 4)}
+                    .{post.updated_at.slice(5, 7)}.
+                    {post.updated_at.slice(8, 10)}
                   </p>
                 </Col>
                 <Col md="8">
