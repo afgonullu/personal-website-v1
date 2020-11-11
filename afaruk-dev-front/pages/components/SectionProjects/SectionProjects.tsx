@@ -20,34 +20,31 @@ const SectionProjects: React.FC<{ portfolioPosts: Post[] }> = (props) => {
   } else {
     cards = portfolioPosts.map((portfolio, i) => {
       return (
-        <Card
-          bg="light"
-          text="dark"
-          className="text-center m-2"
-          key={portfolio.title}
+        <Link
+          key={portfolio.slug}
+          href="projects/[slug]"
+          as={`/projects/${portfolio.slug}`}
         >
-          <div className="img-parent">
-            <img
-              src="https://source.unsplash.com/random/320x160"
-              className="card-img-top"
-              alt="img"
-            ></img>
-            <div className="card-img-overlay">
-              <IconsGenerator portfolio={portfolio} />
+          <Card bg="light" text="dark" className="text-center m-2">
+            <div className="img-parent">
+              <img
+                src={portfolio.feature_image}
+                className="card-img-top"
+                alt={portfolio.title}
+              ></img>
+              <div className="card-img-overlay">
+                <IconsGenerator portfolio={portfolio} />
+              </div>
             </div>
-          </div>
-          <Card.Body>
-            <Card.Title className="text-primary">{portfolio.title}</Card.Title>
-            <Card.Text>{portfolio.custom_excerpt}</Card.Text>
-          </Card.Body>
-          <Card.Footer>
-            <Button variant="outline-primary">
-              <Link href="projects/[slug]" as={`/projects/${portfolio.slug}`}>
-                <p>See Showcase</p>
-              </Link>
-            </Button>
-          </Card.Footer>
-        </Card>
+            <Card.Body>
+              <Card.Title className="text-primary">
+                {portfolio.title}
+              </Card.Title>
+              <Card.Text>{portfolio.custom_excerpt}</Card.Text>
+            </Card.Body>
+            <Card.Footer></Card.Footer>
+          </Card>
+        </Link>
       )
     })
   }

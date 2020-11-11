@@ -47,7 +47,7 @@ const Portfolio: React.FC<{ posts: Post[]; tags: [{ name: string }] }> = (
             )
           })}
         </ul> */}
-        <div className="posts-list">
+        <div className="projects posts-list">
           {posts.map((post, index) => {
             return (
               <Row className="posts-list-item d-flex align-items-baseline">
@@ -58,6 +58,9 @@ const Portfolio: React.FC<{ posts: Post[]; tags: [{ name: string }] }> = (
                   <Link href="projects/[slug]" as={`/projects/${post.slug}`}>
                     <h5 className="post-title">{post.title}</h5>
                   </Link>
+                  <p className="text-muted read-time">
+                    {post.reading_time} min Read
+                  </p>
                 </Col>
                 <Col md="8">
                   <p className="post-excerpt">{post.custom_excerpt}</p>

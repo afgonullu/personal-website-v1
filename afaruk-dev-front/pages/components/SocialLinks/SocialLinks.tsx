@@ -2,7 +2,7 @@ import React from "react"
 
 const SocialLinks = (props) => {
   return (
-    <React.Fragment>
+    <div>
       <a
         href="https://www.github.com/afgonullu"
         target="_blank"
@@ -79,7 +79,7 @@ const SocialLinks = (props) => {
         </svg>
         <span>Contact via Mail</span>
       </a>
-    </React.Fragment>
+    </div>
   )
 }
 

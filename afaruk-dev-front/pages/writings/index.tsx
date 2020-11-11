@@ -5,7 +5,7 @@ import PageHeader from "../components/PageHeader/PageHeader"
 import SiteFooter from "../components/SiteFooter/SiteFooter"
 import { getAllTags, getPostsByTag } from "../api/ghost"
 import { Post } from "../index"
-import { Col, Container, Row } from "react-bootstrap"
+import { Card, Col, Container, Row } from "react-bootstrap"
 import IconsGenerator from "pages/components/IconsGenerator/Icons"
 import { basename } from "path"
 
@@ -48,24 +48,34 @@ const Blog: React.FC<{ posts: Post[]; tags: [{ name: string }] }> = (props) => {
         <div className="writings posts-list">
           {posts.map((post, index) => {
             return (
-              <Row className="posts-list-item d-flex align-items-baseline">
-                <Col
-                  md="2"
-                  className="post-tech"
-                  style={{
-                    background: `url(${post.feature_image}) auto top center`,
-                  }}
-                ></Col>
-                <Col md="3">
-                  <Link href="writings/[slug]" as={`/writings/${post.slug}`}>
-                    <h5 className="post-title">{post.title}</h5>
-                  </Link>
-                  <p>{post.reading_time}</p>
-                </Col>
-                <Col md="7">
-                  <p className="post-excerpt">{post.custom_excerpt}</p>
-                </Col>
-              </Row>
+              <Card className="posts-list-item" key={post.slug}>
+                <Row className="g-0">
+                  <Col md="3" className="post-tech">
+                    <img src={post.feature_image} alt={post.title} />
+                  </Col>
+                  <Col md="9">
+                    <Card.Body>
+                      <Card.Title>
+                        <Link
+                          href="writings/[slug]"
+                          as={`/writings/${post.slug}`}
+                        >
+                          <h5 className="post-title">{post.title}</h5>
+                        </Link>
+                      </Card.Title>
+                      <Card.Text className="text-muted read-time">
+                        {post.reading_time} min Read
+                      </Card.Text>
+                      <Card.Text className="post-excerpt">
+                        {post.custom_excerpt}
+                      </Card.Text>
+                    </Card.Body>
+                  </Col>
+                  {/* <Col md="7">
+                    <p className="post-excerpt">{post.custom_excerpt}</p>
+                  </Col> */}
+                </Row>
+              </Card>
             )
           })}
         </div>

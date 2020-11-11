@@ -1,5 +1,24 @@
-.writings {
-  posts-list-item {
+.writings.posts-list {
+  .posts-list-item.card {
     padding: 0;
+    margin-bottom: 1.25rem;
+    border: 1px solid rgba(234, 249, 217, 0.5);
+    border-radius: 0;
+    background-color: transparent;
+
+    .post-tech {
+      margin: 0 !important;
+      padding: 0 !important;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        max-height: 210px;
+      }
+    }
+  }
+
+  .posts-list-item:hover {
+    background: rgba(245, 245, 245, 0.1);
   }
 }

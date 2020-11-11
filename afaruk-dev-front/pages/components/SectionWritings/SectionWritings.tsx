@@ -19,29 +19,24 @@ const SectionWritings: React.FC<{ blogPosts: Post[] }> = (props) => {
   } else {
     cards = blogPosts.map((blog, i) => {
       return (
-        <Card
-          bg="light"
-          text="dark"
-          className="text-center m-2"
-          key={blog.title}
+        <Link
+          key={blog.slug}
+          href="writings/[slug]"
+          as={`/writings/${blog.slug}`}
         >
-          <img
-            src="https://source.unsplash.com/random/320x160"
-            className="card-img-top"
-            alt="img"
-          ></img>
-          <Card.Body>
-            <Card.Title className="text-danger">{blog.title}</Card.Title>
-            <Card.Text>{blog.custom_excerpt}</Card.Text>
-          </Card.Body>
-          <Card.Footer>
-            <Button variant="outline-danger">
-              <Link href="writings/[slug]" as={`/writings/${blog.slug}`}>
-                <p>Read More</p>
-              </Link>
-            </Button>
-          </Card.Footer>
-        </Card>
+          <Card bg="light" text="dark" className="text-center m-2">
+            <img
+              src={blog.feature_image}
+              className="card-img-top"
+              alt={blog.title}
+            ></img>
+            <Card.Body>
+              <Card.Title className="text-danger">{blog.title}</Card.Title>
+              <Card.Text>{blog.custom_excerpt}</Card.Text>
+            </Card.Body>
+            <Card.Footer></Card.Footer>
+          </Card>
+        </Link>
       )
     })
   }

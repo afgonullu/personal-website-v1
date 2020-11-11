@@ -7,7 +7,7 @@ const SiteFooter: React.FC = (props) => {
     <footer>
       <Container>
         <Row>
-          <Col md="6">
+          <Col className="footer-socials" md="6">
             <p>
               These are some of the places you can find and follow me on the
               internet. You can also email me, if you prefer. Nevertheless, I

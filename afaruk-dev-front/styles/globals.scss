@@ -83,6 +83,7 @@ section {
 .card-group {
   justify-content: center;
   .card {
+    cursor: pointer;
     border-radius: 1rem !important;
     border: none;
     min-width: 320px;
@@ -110,6 +111,8 @@ section {
 .card-img-top {
   border: none;
   border-radius: 0;
+  object-fit: cover;
+  max-height: 210px;
 }
 
 .posts-list {
@@ -121,6 +124,10 @@ section {
 
     &:last-child {
       border-bottom: 1px solid rgba(234, 249, 217, 0.5);
+    }
+
+    .read-time {
+      font-size: 0.8rem;
     }
 
     .post-tech {
