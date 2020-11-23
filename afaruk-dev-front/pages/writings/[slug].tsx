@@ -43,7 +43,7 @@ const WritingsPost: React.FC<{ post: Post }> = (props) => {
       ></PageHeader>
       <div
         style={{
-          background: `url(${post.feature_image}) no-repeat top center`,
+          background: `url(${post.feature_image}) center/cover`,
           height: "50vh",
           maxHeight: "480px",
           marginBottom: "2.441rem",
