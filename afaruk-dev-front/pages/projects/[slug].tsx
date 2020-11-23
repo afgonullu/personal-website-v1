@@ -39,13 +39,24 @@ const ProjectPost: React.FC<{ post: Post }> = (props) => {
         title={post.title}
         subtitle={post.custom_excerpt}
       ></PageHeader>
+      <div
+        style={{
+          background: `url(${post.feature_image}) no-repeat top center`,
+          height: "50vh",
+          maxHeight: "480px",
+          marginBottom: "2.441rem",
+        }}
+      ></div>
       <Container>
         <Breadcrumb className="text-dark">
           <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
           <Breadcrumb.Item href="/writings">Projects</Breadcrumb.Item>
           <Breadcrumb.Item active>{post.title}</Breadcrumb.Item>
         </Breadcrumb>
-        <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+        <div
+          className="post-content"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        ></div>
       </Container>
       <SiteFooter></SiteFooter>
     </React.Fragment>

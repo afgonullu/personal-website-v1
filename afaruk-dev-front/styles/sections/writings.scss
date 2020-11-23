@@ -22,3 +22,18 @@
     background: rgba(245, 245, 245, 0.1);
   }
 }
+
+.post-content {
+  padding: 1rem 2.441rem;
+  line-height: 1.563rem;
+
+  figure {
+    img {
+      width: 100%;
+    }
+    figcaption {
+      font-size: 0.8rem;
+      opacity: 0.75;
+    }
+  }
+}
