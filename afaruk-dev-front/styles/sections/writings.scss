@@ -36,4 +36,16 @@
       opacity: 0.75;
     }
   }
+
+  pre {
+    background: #1e325c;
+    padding: 1rem;
+  }
+
+  .kg-code-card {
+    pre {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
 }
