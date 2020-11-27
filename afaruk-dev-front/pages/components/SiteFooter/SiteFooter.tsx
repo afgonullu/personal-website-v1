@@ -8,6 +8,7 @@ const SiteFooter: React.FC = (props) => {
       <Container>
         <Row>
           <Col className="footer-socials" md="6">
+            <h5>Social Presence</h5>
             <p>
               These are some of the places you can find and follow me on the
               internet. You can also email me, if you prefer. Nevertheless, I
@@ -17,7 +18,7 @@ const SiteFooter: React.FC = (props) => {
           </Col>
           <Col md="3">
             <Nav defaultActiveKey="/home" className="flex-column">
-              <h6>Site Map</h6>
+              <h5>Site Map</h5>
               <Nav.Link href="/writings">Writings</Nav.Link>
               <Nav.Link href="/projects">Projects</Nav.Link>
               <Nav.Link href="/workflow">Workflow</Nav.Link>

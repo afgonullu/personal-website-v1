@@ -52,6 +52,13 @@ const SectionWritings: React.FC<{ blogPosts: Post[] }> = (props) => {
           title={copyText.title}
           text={copyText.text}
         ></SectionHeader>
+        <p className="text-danger secondary-link">
+          I have just finished implementing this website. I am filling out the
+          content 24/7. Therefore you may see some placeholder content here and
+          there. If you visit tomorrow, you will see new content and a more
+          complete website. Please bear with me while I create new valuable
+          content.{" "}
+        </p>
         <CardGroup className="mb-4">{cards}</CardGroup>
         <p className="lead">
           <Link href="/writings">

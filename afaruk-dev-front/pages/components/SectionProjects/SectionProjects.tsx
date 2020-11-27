@@ -62,6 +62,56 @@ const SectionProjects: React.FC<{ portfolioPosts: Post[] }> = (props) => {
           title={copyText.title}
           text={copyText.text}
         ></SectionHeader>
+        <p className="secondary-link text-secondary">
+          I am working on my new projects and also previously completed projects
+          to make them portfolio quality. I will add them here one by one when
+          they are ready. In the mean time, you can check my projects on my
+          github{" "}
+          <a
+            href="https://github.com/afgonullu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            here
+          </a>
+          ,{" "}
+          <a href="https://github.com/afg-education" target="_blank">
+            here
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://github.com/afg-frontend-mentor"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            here
+          </a>
+          . Also check out my{" "}
+          <a
+            href="https://glitch.com/@afgonullu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            glitch projects
+          </a>{" "}
+          and codepen collections of{" "}
+          <a
+            href="https://codepen.io/collection/AGrQjy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            JavaScript projects
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://codepen.io/collection/XmoEzq"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            HTML/CSS projects
+          </a>
+          .
+        </p>
         <CardGroup className="mb-4">{cards}</CardGroup>
         <p className="secondary-link text-secondary">
           <Link href="/projects">
