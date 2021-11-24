@@ -67,7 +67,7 @@ const SocialLinks = (props) => {
         </svg>
         <span>Follow me on Twitter</span>
       </a>
-      <a href="mailto:af@gonul.lu" className="social-icons-item">
+      <a href="mailto:contact@afaruk.dev" className="social-icons-item">
         <svg
           role="img"
           viewBox="0 0 24 24"
